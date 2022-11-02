@@ -1,5 +1,6 @@
 import styles from './App.module.css';
 import image from './images/konstantin.jpeg';
+import imageWebp from './images/konstantin.webp';
 import tg from './images/telegram.svg';
 import vk from './images/vk.svg';
 
@@ -8,7 +9,10 @@ export const App = () => {
 		<section className={styles.app}>
 			<div className={styles.container}>
 				<div className={styles.imageWrapper}>
-					<img className={styles.image} src={image} alt='Константин Антипин' />
+					<picture>
+						<source srcset={imageWebp} type='image/webp' />
+						<img className={styles.image} src={image} alt='Константин Антипин' />
+					</picture>
 				</div>
 				<div className={styles.descriptionWrapper}>
 					<h1 className={styles.title}>Константин Антипин</h1>
